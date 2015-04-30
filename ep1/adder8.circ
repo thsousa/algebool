@@ -20,7 +20,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
       <a name="text" val=""/>
-      <a name="font" val="SansSerif plain 12"/>
+      <a name="font" val="SansSerif bold 12"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
     </tool>
@@ -41,7 +41,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="6" name="Edit Tool"/>
     <tool lib="6" name="Text Tool">
       <a name="text" val=""/>
-      <a name="font" val="SansSerif plain 12"/>
+      <a name="font" val="SansSerif bold 12"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
     </tool>
@@ -475,6 +475,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <rect fill="none" height="62" stroke="#000000" stroke-width="2" width="74" x="28" y="55"/>
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="44" y="94">A</text>
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="44" y="114">B</text>
+      <text fill="#0000d4" font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="69" y="100">A+B</text>
       <circ-port height="8" pin="330,320" width="8" x="26" y="86"/>
       <circ-port height="8" pin="330,350" width="8" x="26" y="106"/>
       <circ-port height="10" pin="570,280" width="10" x="95" y="85"/>
@@ -574,12 +575,24 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(200,180)" to="(290,180)"/>
-    <wire from="(290,200)" to="(310,200)"/>
-    <wire from="(290,180)" to="(290,200)"/>
-    <wire from="(380,200)" to="(420,200)"/>
-    <wire from="(270,220)" to="(310,220)"/>
+    <appear>
+      <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="60" stroke="#000000" stroke-width="2" width="70" x="50" y="50"/>
+      <text fill="#0000d4" font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="89" y="84">A-B</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="61" y="105">B</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="61" y="75">A</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="108" y="66">S</text>
+      <circ-port height="8" pin="200,180" width="8" x="46" y="66"/>
+      <circ-port height="8" pin="200,220" width="8" x="46" y="96"/>
+      <circ-port height="10" pin="420,200" width="10" x="115" y="55"/>
+      <circ-anchor facing="east" height="6" width="6" x="117" y="57"/>
+    </appear>
+    <wire from="(270,220)" to="(320,220)"/>
+    <wire from="(200,180)" to="(310,180)"/>
+    <wire from="(390,200)" to="(420,200)"/>
     <wire from="(200,220)" to="(230,220)"/>
+    <wire from="(310,180)" to="(310,200)"/>
+    <wire from="(310,200)" to="(320,200)"/>
     <comp lib="0" loc="(200,180)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
@@ -595,7 +608,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp loc="(380,200)" name="8Adder"/>
+    <comp loc="(390,200)" name="8Adder"/>
   </circuit>
   <circuit name="8bitMultiplier">
     <a name="circuit" val="8bitMultiplier"/>
@@ -1865,6 +1878,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="60" stroke="#000000" stroke-width="2" width="72" x="50" y="50"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="63" y="73">A</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="62" y="94">B</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="110" y="85">S</text>
+      <text fill="#0000f5" font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="88" y="80">A*B</text>
+      <circ-port height="8" pin="160,250" width="8" x="46" y="66"/>
+      <circ-port height="8" pin="250,250" width="8" x="46" y="86"/>
+      <circ-port height="10" pin="330,420" width="10" x="115" y="75"/>
+      <circ-anchor facing="east" height="6" width="6" x="117" y="77"/>
+    </appear>
     <wire from="(250,250)" to="(250,270)"/>
     <wire from="(160,250)" to="(160,270)"/>
     <wire from="(330,400)" to="(330,420)"/>
